@@ -4,7 +4,7 @@
 
 <head>
     <title>Help</title>
-    <link rel="icon" href="/img/weather.png">
+    <link rel="icon" href="/img/weather_icon.png">
     <link rel="stylesheet" href="./css/styles.css"> 
    
 </head>
@@ -12,8 +12,13 @@
 <body>
     <div class="main-content">
     {{>header}}
-    <p>{{name}}</p>
+    <p>{{helpText}}</p>
+    <div class="bodyContent">
+        <p>This is a web app to search the current weather anywhere on earth. All you need to get the forecast is to provide 
+        an address in the weather section<p>
     </div>
+    </div>
+    
     
     {{>footer}}
 </body>

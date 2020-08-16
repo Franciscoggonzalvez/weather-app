@@ -10,6 +10,12 @@ body {
     min-height: 100vh;
 
 }
+.bodyContent{
+    color: #333666;
+    display: flex;
+    flex-direction: column; 
+    max-width: 390px;
+}
 
 .main-content {
     flex-grow: 1;/*peprmite a unnelemento dado coger tanto espacio como necesite, en este caso le decimos que el main content tome el espacio sobranre*/
@@ -43,6 +49,8 @@ header a {
 
 .portrait {
     width: 250px;
+    margin-left: 50px;
+    
 }
 
 input {

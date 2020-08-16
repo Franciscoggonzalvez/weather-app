@@ -26,22 +26,21 @@ app.use(express.static(publicDirectoryPath))
 app.get('',(req, res) => {
     //primer argumento el nombre del archivo hbs y el segundo es un objeto
     res.render('index', {
-        title: 'El Tiempo',
+        title: 'Weather',
         name: 'Francisco G.Gonzálvez'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'Sobre mi..',
+        title: 'About',
         name: 'Franciso G. Gonzálvez'
     } )
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'Texto de ayuda',
-        title: 'Ayuda',
+        title: 'Help',
         name: 'Francisco G.Gonzálvez'
     })
 })
@@ -49,7 +48,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
     if(!req.query.address) {
         return res.send({
-            error: 'Debes porporcionar una localidad'
+            error: 'You must provide an address'
         })
     }
     geocode (req.query.address, (error, {latitude, longitude, location} = {}) =>{
@@ -75,7 +74,7 @@ app.get('/weather', (req, res) => {
 app.get('/products', (req, res) => {
     if(!req.query.search){ //si no hay parámetros en la url 
         return res.send({
-            error: 'Debes proporcionar una búsqueda'
+            error: 'You must provide a search'
         })
 
     }
@@ -95,7 +94,7 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
         name: 'Francisco G.Gonzálvez',
-        errorMessage: 'Ayuda no encontrada'
+        errorMessage: 'Help not found'
     })
 })
 
@@ -103,7 +102,7 @@ app.get('*', (req, res) =>{
     res.render('404', {
         title: '404',
         name: 'Francisco G.Gonzálvez',
-        errorMessage: 'Página no encontrada'
+        errorMessage: 'Page not found'
     })
 })
 
