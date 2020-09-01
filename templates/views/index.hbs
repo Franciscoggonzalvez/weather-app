@@ -7,6 +7,8 @@
     <link rel="icon" href="/img/weather_icon.png">
     <!-- link es un elemento vacío. href es el path relativo (o absoluto) del archivo a cargar -->
     <link rel="stylesheet" href="/css/styles.css"> 
+
+    
     
 
 </head>
@@ -14,11 +16,16 @@
     <div class="main-content">
         {{>header}}
         <p>Use this site to get your weather!</p>
-
+        <br><br>
+        <p>Please, click the button to get the weather of your current location</p>
+        <p><button id="send-location">current weather</button></p>
+        <br>
+        <p>Please, enter the location you wish to know the current weather</p>
         <form>
             <input placeholder="Location">
             <button>Search</button>
         </form>
+        
 
         <p id="message-1"></p>
         <p id="message-2"></p>
