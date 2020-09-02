@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require ('./utils/forecast')
 const reversegeocode = require('./utils/reversegeocode')
+//import 'bulma/css/bulma.css'
 
 // // console.log(__dirname) //path al directorio
 // // console.log(__filename) //path al archivo
@@ -29,21 +30,21 @@ app.get('',(req, res) => {
     //primer argumento el nombre del archivo hbs y el segundo es un objeto
     res.render('index', {
         title: 'Weather',
-        name: 'Francisco G.Gonzálvez'
+        name: 'Francisco G. Gonzálvez'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
-        name: 'Franciso G. Gonzálvez'
+        name: 'Francisco G. Gonzálvez'
     } )
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        name: 'Francisco G.Gonzálvez'
+        name: 'Francisco G. Gonzálvez'
     })
 })
 

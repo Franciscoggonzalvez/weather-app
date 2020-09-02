@@ -3,37 +3,74 @@
 <html>
 
 <head>
+    {{!-- <link rel="stylesheet" href="/css/styles.css"> --}}
+    <link rel="stylesheet" href="/css/bulma.css">
+    <link rel="stylesheet" href="/css/additionalStyles.css">
+     
+    
     <title>Weather</title>
     <link rel="icon" href="/img/weather_icon.png">
     <!-- link es un elemento vacío. href es el path relativo (o absoluto) del archivo a cargar -->
-    <link rel="stylesheet" href="/css/styles.css"> 
-
-    
-    
-
+   
 </head>
 <body>
-    <div class="main-content">
-        {{>header}}
-        <p>Use this site to get your weather!</p>
-        <br><br>
-        <p>Please, click the button to get the weather of your current location</p>
-        <p><button id="send-location">current weather</button></p>
-        <br>
-        <p>Please, enter the location you wish to know the current weather</p>
-        <form>
-            <input placeholder="Location">
-            <button>Search</button>
-        </form>
+    <div class="columns is-mobile mt-3">
+        <div class="column is-6 is-offset-3">
+            <div class="main-content">
+                {{>header}}
+
+                {{!-- <div class="mt-5 mb-5">
+                    <h4 class="subtitle is-4">Get the world weather forecast in this site!</h4>
+                </div> --}}
+                <div class="columns is-mobile mt-6 mb-4">
+                    <div class="column">
+
+                        <div class="has-text-centered mb-4">
+                            <div class="mb-5">
+                                <h6 class="subtitle is-6">Get the weather of your current location</6>
+                            </div>
+                            <div >
+                                <p><button id="send-location" class="button is-link is-small is-rounded is-focused">Get weather</button></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+
+                        <div class="has-text-centered mb-4">
+                            <h6 class="subtitle is-6">Enter the location you wish to get the weather</h6>
+                            <form>
+                                    <div class="columns is-mobile mb-4">
+                                        <div class="column ml-6">
+                                            <input class="input is-rounded is-small mr-6" type="text" placeholder="Location">
+                                        </div>
+                                        <div class="column has-text-left">
+                                            <button class="button is-link is-small is-rounded is-focused">Search</button>
+                                         </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <article class="message is-link tablatiempo">
+                <div class="message-header">
+                    <p id="message-1">Location</p>
+                </div>
+                <div class="message-body">
+                    <p id="message-2">Forecast</p>
+                </div>
+            </article>
+            <script src="/js/app.js"></script>
+        </div>
+
         
-
-        <p id="message-1"></p>
-        <p id="message-2"></p>
-
     </div>
-    {{>footer}}
-
-    <script src="/js/app.js"></script>
+    
+    
+    
+   {{>footer}}
 </body>
    
 

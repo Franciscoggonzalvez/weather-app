@@ -5,20 +5,24 @@
 <head>
     <title>Help</title>
     <link rel="icon" href="/img/weather_icon.png">
-    <link rel="stylesheet" href="./css/styles.css"> 
-   
+    <link rel="stylesheet" href="/css/bulma.css">
+    {{!-- <link rel="stylesheet" href="./css/styles.css">  --}}
+   <link rel="stylesheet" href="/css/additionalStyles.css">
 </head>
 
 <body>
-    <div class="main-content">
-    {{>header}}
-    <p>{{helpText}}</p>
-    <div class="bodyContent">
-        <p>This is a web app to search the current weather anywhere on earth. All you need to get the forecast is to provide 
-        an address in the weather section<p>
+    <div class="columns is-mobile mt-3">
+        <div class="column is-6 is-offset-3">
+            <div class="main-content">
+            {{>header}}
+            <p>{{helpText}}</p>
+                <div class="bodyContent mt-6">
+                    <p>This is a web app to search the current weather in your location and anywhere on earth. All you need to get the forecast is to
+                        access to the "Weather" section and follow the instructions. <p>If you have any problem to access data, please, contact with me.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    
     
     {{>footer}}
 </body>

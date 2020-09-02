@@ -1,0 +1,12 @@
+.footerFran {
+    display: inline-flexbox;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    padding-bottom: 3%;
+    padding-top: 2%; 
+}
+.tablatiempo{
+    min-width: 335px;
+}

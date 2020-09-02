@@ -5,20 +5,35 @@
 <head>
     <title>About</title>
     <link rel="icon" href="/img/weather_icon.png">
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/bulma.css">
+    {{!-- <link rel="stylesheet" href="/css/styles.css">  --}}
+    <link rel="stylesheet" href="/css/additionalStyles.css">
     
 </head>
 
 
 <body>
-    <div class="main-content">
-    {{>header}}
-    <div class="bodyContent">
-        <p>This site was created by Francisco G. Gonzálvez. It uses data from mapbox.com and weatherstack.com</p>
-    </div>
-    <img class="portrait" src="/img/Fran.jpeg">
-    
-
+     <div class="columns is-mobile mt-3">
+        <div class="column is-6 is-offset-3">
+            <div class="main-content">
+            {{>header}}
+            <div class="mb-6 mt-6">
+                <p>This app was created by Francisco G. Gonzálvez. It uses data from mapbox.com and weatherstack.com</p>
+            </div>
+                <div class="is-flex mt-6 ml-6 has-text-centered">
+                    <figure class="image is-128x128">
+                        <img class="is-rounded"src="/img/FranBlancoYNegro.jpeg">
+                    </figure>
+                    <figure class="image is-128x128">
+                        <img src="/img/mapbox.png">
+                    </figure>
+                    <figure class="image is-128x128">
+                        <img src="/img/weatherstack.png">
+                    </figure>
+                </div>
+                  
+            </div>
+        </div>
     </div>
     
     
